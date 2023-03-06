@@ -26,4 +26,16 @@
   <extensions defaultExtensionNs="com.intellij">
 
   </extensions>
+
+  <actions>
+    <action
+      id="ChooseLicense.NewLicenseFile"
+      class="sh.catx.chooselicense.actions.NewLicenseFileAction"
+      text="LICENSE"
+      description="New license file"
+      icon="/META-INF/pluginIcon.svg"
+    >
+      <add-to-group group-id="NewGroup" anchor="last"/>
+    </action>
+  </actions>
 </idea-plugin>
