@@ -15,6 +15,7 @@ class NewLicenseFileDialog : DialogWrapper(true) {
   var author = System.getProperty("user.name") ?: ""
   var year = Year.now().value.toString()
   var license = LICENSE_LIST[0]
+  var fileName = "LICENSE"
 
   private val formPanel = panel {
     row("Author:") {
@@ -29,6 +30,11 @@ class NewLicenseFileDialog : DialogWrapper(true) {
     }
     row("License:") {
       comboBox(LICENSE_LIST, LicenseListCellRenderer()).bindItem(::license.toNullableProperty())
+    }
+    row("FileName:") {
+      textField()
+        .bindText(::fileName)
+        .validationOnInput { if (it.text.isNullOrBlank()) ValidationInfo("FileName is required", it) else null }
     }
   }
 
