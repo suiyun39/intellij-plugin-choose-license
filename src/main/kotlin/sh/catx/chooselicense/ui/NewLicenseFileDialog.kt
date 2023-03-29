@@ -3,6 +3,7 @@ package sh.catx.chooselicense.ui
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.ui.ValidationInfo
 import com.intellij.ui.dsl.builder.*
+import com.intellij.ui.dsl.gridLayout.HorizontalAlign
 import sh.catx.chooselicense.license.LICENSE_LIST
 import sh.catx.chooselicense.license.License
 import java.awt.Component
@@ -22,19 +23,24 @@ class NewLicenseFileDialog : DialogWrapper(true) {
       textField()
         .bindText(::author)
         .validationOnInput { if (it.text.isNullOrBlank()) ValidationInfo("Author is required", it) else null }
+        .horizontalAlign(HorizontalAlign.FILL)
     }
     row("Year:") {
       textField()
         .bindText(::year)
         .validationOnInput { if (it.text.isNullOrBlank()) ValidationInfo("Year is required", it) else null }
+        .horizontalAlign(HorizontalAlign.FILL)
     }
     row("License:") {
-      comboBox(LICENSE_LIST, LicenseListCellRenderer()).bindItem(::license.toNullableProperty())
+      comboBox(LICENSE_LIST, LicenseListCellRenderer())
+        .bindItem(::license.toNullableProperty())
+        .horizontalAlign(HorizontalAlign.FILL)
     }
     row("FileName:") {
       textField()
         .bindText(::fileName)
         .validationOnInput { if (it.text.isNullOrBlank()) ValidationInfo("FileName is required", it) else null }
+        .horizontalAlign(HorizontalAlign.FILL)
     }
   }
 
