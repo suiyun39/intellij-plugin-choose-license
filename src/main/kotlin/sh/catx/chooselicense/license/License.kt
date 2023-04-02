@@ -11,7 +11,7 @@ class License(
   private val yearTag: String?,
 ) {
   fun generate(author: String, year: String): String {
-    val templateFile = this.javaClass.getResource("/license/$type")
+    val templateFile = this.javaClass.getResource("/license/$type.txt")
     var template = templateFile?.readText() ?: ""
 
     if (authorTag != null) {
