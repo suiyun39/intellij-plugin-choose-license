@@ -8,11 +8,12 @@
     ":labels(dependencies)"
   ],
   "rebaseWhen": "never",
+  "rangeStrategy": "bump",
   "packageRules": [
     {
-      "groupName": "{{manager}} dependencies",
-      "matchPackagePatterns": [
-        "*"
+      "groupName": "gradle dependencies",
+      "matchManagers": [
+        "gradle"
       ],
       "matchUpdateTypes": [
         "minor",
