@@ -1,17 +1,17 @@
 # intellij-plugin-choose-license
 
-Choose a license for your project in IntelliJ platform
+在 IntelliJ IDEA 中为你的项目选择许可证
 
 [English](./README.md) | [简体中文](./README.zh-CN.md)
 
 ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/21423?logo=intellijidea&style=for-the-badge)
 
-## Installation
+## 安装
 
-1. Open `Settings` -> `Plugins` and search for `Choose License`
-2. Click `Install`
+1. 打开 `设置` -> `插件` 并搜索 `Choose License`
+2. 点击 `安装`
 
-## Reference & Thanks
+## 参考与感谢
 
-- [IconScout](https://iconscout.com/) - Thanks for the license icon
+- [IconScout](https://iconscout.com/) - 感谢提供图标
 - [license-generator-intellij-plugin](https://github.com/FatihBozik/license-generator-intellij-plugin)
