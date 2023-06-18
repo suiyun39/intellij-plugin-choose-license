@@ -8,8 +8,8 @@
   <name>Choose License</name>
 
   <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-  <vendor email="nodoccat@outlook.com" url="https://github.com/NoDocCat/intellij-plugin-choose-license">
-    NoDocCat
+  <vendor email="suiyun39@gmail.com" url="https://github.com/suiyun39/intellij-plugin-choose-license">
+    suiyun39
   </vendor>
 
   <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
