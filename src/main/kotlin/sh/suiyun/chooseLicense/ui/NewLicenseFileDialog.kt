@@ -20,6 +20,13 @@ class NewLicenseFileDialog : DialogWrapper(true) {
   }
 
   /**
+   * 允许保存和恢复对话框的状态
+   */
+  override fun getDimensionServiceKey(): String {
+    return "sh.suiyun.chooseLicense.ui.NewLicenseFileDialog"
+  }
+
+  /**
    * 点击确定按钮时执行的方法
    */
   override fun doOKAction() {
