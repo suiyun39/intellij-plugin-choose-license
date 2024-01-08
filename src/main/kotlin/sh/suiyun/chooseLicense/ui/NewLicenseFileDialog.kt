@@ -1,6 +1,8 @@
 package sh.suiyun.chooseLicense.ui
 
 import com.intellij.openapi.ui.DialogWrapper
+import java.awt.event.ComponentAdapter
+import java.awt.event.ComponentEvent
 import javax.swing.JComponent
 
 /**
@@ -9,7 +11,9 @@ import javax.swing.JComponent
 class NewLicenseFileDialog : DialogWrapper(true) {
   init {
     title = "New License File"
+
     init()
+    disableHeightResize()
   }
 
   /**
@@ -24,6 +28,20 @@ class NewLicenseFileDialog : DialogWrapper(true) {
    */
   override fun getDimensionServiceKey(): String {
     return "sh.suiyun.chooseLicense.ui.NewLicenseFileDialog"
+  }
+
+  /**
+   * 禁止调整对话框高度
+   */
+  private fun disableHeightResize() {
+    val listener = object : ComponentAdapter() {
+      override fun componentResized(evt: ComponentEvent) {
+        // 这里 height 设置为 0 不会影响组件撑起对话框的高度
+        window.setSize(evt.component.width, 0)
+      }
+    }
+
+    window.addComponentListener(listener)
   }
 
   /**
