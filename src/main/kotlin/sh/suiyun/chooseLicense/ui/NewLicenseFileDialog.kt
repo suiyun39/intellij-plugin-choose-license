@@ -80,5 +80,10 @@ class NewLicenseFileDialog : DialogWrapper(true) {
    */
   override fun doOKAction() {
     super.doOKAction()
+
+    // 保存用户输入信息以供下次使用
+    Storage.author = author
+    Storage.year = year
+    Storage.fileName = fileName
   }
 }
