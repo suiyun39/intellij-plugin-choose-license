@@ -48,6 +48,9 @@ class NewLicenseFileDialog : DialogWrapper(true) {
       row("Year:") {
         textField().bindText(::year).validationRequired("Year").align(Align.FILL)
       }
+      row("License:") {
+        cell(LicenseCombo()).align(Align.FILL)
+      }
       row("FileName:") {
         textField().bindText(::fileName).validationRequired("FileName").align(Align.FILL)
       }
