@@ -14,4 +14,23 @@ object Resource {
 
     return folder.listFiles()?.sorted()?.map { it.name } ?: emptyList()
   }
+
+  /**
+   * 解析 LICENSE 文件模板, 获取 spdx-id 和正文内容
+   */
+  fun parseLicenseTemplate(fileName: String): Pair<String, String> {
+    val file = FileLoader.get().load("/licenses/$fileName", this.javaClass)
+    val text = file.readText()
+
+    // 拆分 meta 和正文
+    val matchResult = "(?s)---(.*?)---(.*)".toRegex().find(text)
+    val meta = matchResult?.groupValues?.get(1) ?: ""
+    val content = matchResult?.groupValues?.get(2)?.trimStart() ?: ""
+
+    // 获取 spdx-id
+    val spdxIdMatchResult = "spdx-id: (.*)".toRegex().find(meta)
+    val spdxId = spdxIdMatchResult?.groupValues?.get(1) ?: ""
+
+    return Pair(spdxId, content)
+  }
 }
