@@ -28,6 +28,7 @@ fun Cell<JBTextField>.validationRequired(fieldName: String): Cell<JBTextField> {
 class NewLicenseFileDialog : DialogWrapper(true) {
   var author = Storage.author
   var year = Storage.year
+  var license = Storage.license
   var fileName = Storage.fileName
 
   init {
@@ -49,7 +50,7 @@ class NewLicenseFileDialog : DialogWrapper(true) {
         textField().bindText(::year).validationRequired("Year").align(Align.FILL)
       }
       row("License:") {
-        cell(LicenseCombo()).align(Align.FILL)
+        cell(LicenseCombo()).bindItem(::license.toNullableProperty()).align(Align.FILL)
       }
       row("FileName:") {
         textField().bindText(::fileName).validationRequired("FileName").align(Align.FILL)
@@ -88,5 +89,6 @@ class NewLicenseFileDialog : DialogWrapper(true) {
     Storage.author = author
     Storage.year = year
     Storage.fileName = fileName
+    Storage.license = license
   }
 }
