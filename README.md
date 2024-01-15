@@ -13,5 +13,7 @@ Choose a license for your project in IntelliJ platform
 
 ## Reference & Thanks
 
+- [licensee](https://github.com/licensee/licensee/) - Thanks for the license template
 - [IconScout](https://iconscout.com/) - Thanks for the license icon
 - [license-generator-intellij-plugin](https://github.com/FatihBozik/license-generator-intellij-plugin)
+- [vscode-choosealicense](https://github.com/ultram4rine/vscode-choosealicense)

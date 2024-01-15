@@ -13,5 +13,7 @@
 
 ## 参考与感谢
 
+- [licensee](https://github.com/licensee/licensee/) - 感谢提供许可证模板
 - [IconScout](https://iconscout.com/) - 感谢提供图标
 - [license-generator-intellij-plugin](https://github.com/FatihBozik/license-generator-intellij-plugin)
+- [vscode-choosealicense](https://github.com/ultram4rine/vscode-choosealicense)
