@@ -4,7 +4,8 @@
 
 [English](./README.md) | [简体中文](./README.zh-CN.md)
 
-![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/21423?logo=intellijidea&style=for-the-badge)
+![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/23527?logo=intellijidea&style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/suiyun39/intellij-plugin-choose-license/ci.yml?label=CI&logo=github-actions&logoColor=white&style=for-the-badge)
 
 ## 安装
 
