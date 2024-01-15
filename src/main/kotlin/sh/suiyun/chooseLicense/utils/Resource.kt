@@ -19,8 +19,8 @@ object Resource {
    * 解析 LICENSE 文件模板, 获取 spdx-id 和正文内容
    */
   fun parseLicenseTemplate(fileName: String): Pair<String, String> {
-    val file = FileLoader.get().load("/licenses/$fileName", this.javaClass)
-    val text = file.readText()
+    val file = this.javaClass.getResource("/licenses/$fileName")
+    val text = file?.readText() ?: ""
 
     // 拆分 meta 和正文
     val matchResult = "(?s)---(.*?)---(.*)".toRegex().find(text)
