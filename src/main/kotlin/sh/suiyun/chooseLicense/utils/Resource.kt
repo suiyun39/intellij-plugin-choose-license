@@ -2,6 +2,7 @@ package sh.suiyun.chooseLicense.utils
 
 import java.io.File
 import java.util.jar.JarFile
+import java.net.URLDecoder
 
 /**
  * 资源文件操作
@@ -21,7 +22,7 @@ object Resource {
 
     // jar 包内路径, 通过 JarFile API 读取
     if (folderURL.protocol == "jar") {
-      val jarFilePath = folderURL.file.substring(5, folderURL.file.indexOf("!"))
+      val jarFilePath = URLDecoder.decode(folderURL.file.substring(5, folderURL.file.indexOf("!")), "UTF-8")
 
       JarFile(File(jarFilePath)).use { jarFile ->
         return jarFile.entries().asSequence()
