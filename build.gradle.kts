@@ -11,10 +11,6 @@ repositories {
   mavenCentral()
 }
 
-dependencies {
-  implementation("com.goterl:resource-loader:2.0.2")
-}
-
 // https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
   version = "2023.1"
