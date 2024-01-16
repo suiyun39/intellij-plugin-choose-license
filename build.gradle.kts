@@ -15,6 +15,7 @@ repositories {
 intellij {
   version = "2023.1"
   type = "IC"
+  updateSinceUntilBuild = false
 }
 
 tasks {
@@ -25,12 +26,6 @@ tasks {
 
   withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions.jvmTarget = "17"
-  }
-
-  // 配置插件的兼容性范围
-  // https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html#platformVersions
-  patchPluginXml {
-    sinceBuild = "231"
   }
 
   // 插件发布

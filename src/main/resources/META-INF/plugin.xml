@@ -8,6 +8,10 @@
     suiyun39
   </vendor>
 
+  <!-- 插件兼容性
+       https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html#platformVersions -->
+  <idea-version since-build="231"/>
+
   <!-- Product and plugin compatibility requirements.
        Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
   <depends>com.intellij.modules.platform</depends>
