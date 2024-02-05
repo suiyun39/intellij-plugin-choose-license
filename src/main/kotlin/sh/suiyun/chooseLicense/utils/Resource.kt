@@ -42,15 +42,19 @@ object Resource {
   fun parseLicenseTemplate(fileName: String): Pair<String, String> {
     val file = this.javaClass.getResource("/licenses/$fileName")
     val text = file?.readText() ?: ""
+    val contents = "(?s)---\n(.*?)---\n(.*)".toRegex().find(text)
 
-    // 拆分 meta 和正文
-    val matchResult = "(?s)---(.*?)---(.*)".toRegex().find(text)
-    val meta = matchResult?.groupValues?.get(1) ?: ""
-    val content = matchResult?.groupValues?.get(2)?.trimStart() ?: ""
-
-    // 获取 spdx-id
+    // 提取 meta 信息
+    val meta = contents?.groupValues?.get(1) ?: ""
     val spdxIdMatchResult = "spdx-id: (.*)".toRegex().find(meta)
     val spdxId = spdxIdMatchResult?.groupValues?.get(1) ?: ""
+
+    // 提取正文
+    var content = contents?.groupValues?.get(2) ?: ""
+
+    while (content.startsWith("\n")) {
+      content = content.replaceFirst("\n", "")
+    }
 
     return Pair(spdxId, content)
   }
