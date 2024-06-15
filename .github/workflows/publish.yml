@@ -34,7 +34,7 @@ jobs:
           RELEASE_NAME=${RELEASE_NAME#refs/tags/v}
           echo "name=${RELEASE_NAME}" >> "$GITHUB_OUTPUT"
 
-      - uses: softprops/action-gh-release@v1
+      - uses: softprops/action-gh-release@v2
         with:
           name: ${{ steps.release_name.outputs.name }}
           body: 'draft'
