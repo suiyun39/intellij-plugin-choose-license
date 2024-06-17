@@ -1,6 +1,6 @@
-package sh.suiyun.chooseLicense.license
+package io.suiyun.chooseLicense.license
 
-import sh.suiyun.chooseLicense.utils.Resource
+import io.suiyun.chooseLicense.utils.Resource
 
 val LICENSE_FILE_LIST = Resource.getLicenseTemplateFiles()
 

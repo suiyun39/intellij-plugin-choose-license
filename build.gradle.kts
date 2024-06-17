@@ -4,7 +4,7 @@ plugins {
   id("org.jetbrains.intellij") version "1.17.4"
 }
 
-group = "sh.suiyun"
+group = "io.suiyun"
 version = "1.2.1"
 
 repositories {

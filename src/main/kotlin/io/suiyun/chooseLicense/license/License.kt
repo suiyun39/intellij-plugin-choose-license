@@ -1,4 +1,4 @@
-package sh.suiyun.chooseLicense.license
+package io.suiyun.chooseLicense.license
 
 class License(val spdxId: String, val content: String) {
   /**

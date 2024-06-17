@@ -1,4 +1,4 @@
-package sh.suiyun.chooseLicense.actions
+package io.suiyun.chooseLicense.actions
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
@@ -6,7 +6,7 @@ import com.intellij.openapi.actionSystem.LangDataKeys
 import com.intellij.openapi.application.runWriteAction
 import com.intellij.psi.PsiDirectory
 import com.intellij.psi.PsiFile
-import sh.suiyun.chooseLicense.ui.NewLicenseFileDialog
+import io.suiyun.chooseLicense.ui.NewLicenseFileDialog
 
 /**
  * 新建 License 文件的 Action

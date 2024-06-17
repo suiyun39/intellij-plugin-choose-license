@@ -1,9 +1,9 @@
-package sh.suiyun.chooseLicense.ui
+package io.suiyun.chooseLicense.ui
 
 import com.intellij.openapi.ui.ComboBox
 import javax.swing.DefaultComboBoxModel
-import sh.suiyun.chooseLicense.license.License
-import sh.suiyun.chooseLicense.license.LICENSE_LIST
+import io.suiyun.chooseLicense.license.License
+import io.suiyun.chooseLicense.license.LICENSE_LIST
 
 /**
  * LICENSE 选择框

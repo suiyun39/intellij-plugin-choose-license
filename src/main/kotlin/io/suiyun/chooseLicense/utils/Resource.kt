@@ -1,4 +1,4 @@
-package sh.suiyun.chooseLicense.utils
+package io.suiyun.chooseLicense.utils
 
 import java.io.File
 import java.util.jar.JarFile

@@ -23,8 +23,8 @@
   <!-- 注册自定义 Action -->
   <actions>
     <action
-      id="sh.suiyun.chooseLicense.actions.NewLicenseFileAction"
-      class="sh.suiyun.chooseLicense.actions.NewLicenseFileAction"
+      id="io.suiyun.chooseLicense.actions.NewLicenseFileAction"
+      class="io.suiyun.chooseLicense.actions.NewLicenseFileAction"
       text="LICENSE"
       description="New license file"
       icon="/META-INF/pluginIcon.svg"

@@ -1,11 +1,11 @@
-package sh.suiyun.chooseLicense.ui
+package io.suiyun.chooseLicense.ui
 
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.ui.ValidationInfo
 import com.intellij.ui.components.JBTextField
 import com.intellij.ui.dsl.builder.*
 import javax.swing.JComponent
-import sh.suiyun.chooseLicense.utils.Storage
+import io.suiyun.chooseLicense.utils.Storage
 
 /**
  * 扩展 Cell<JBTextField>, 增加必填校验
@@ -59,7 +59,7 @@ class NewLicenseFileDialog : DialogWrapper(true) {
    * 允许保存和恢复对话框的状态
    */
   override fun getDimensionServiceKey(): String {
-    return "sh.suiyun.chooseLicense.ui.NewLicenseFileDialog"
+    return "io.suiyun.chooseLicense.ui.NewLicenseFileDialog"
   }
 
   /**

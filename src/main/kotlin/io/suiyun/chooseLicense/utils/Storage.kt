@@ -1,9 +1,9 @@
-package sh.suiyun.chooseLicense.utils
+package io.suiyun.chooseLicense.utils
 
 import com.intellij.ide.util.PropertiesComponent
 import java.time.Year
-import sh.suiyun.chooseLicense.license.License
-import sh.suiyun.chooseLicense.license.LICENSE_LIST
+import io.suiyun.chooseLicense.license.License
+import io.suiyun.chooseLicense.license.LICENSE_LIST
 
 /**
  * 存储用户输入信息
@@ -11,10 +11,10 @@ import sh.suiyun.chooseLicense.license.LICENSE_LIST
 object Storage {
   private var properties: PropertiesComponent = PropertiesComponent.getInstance()
 
-  private const val AUTHOR_KEY = "sh.suiyun.chooseLicense.author"
-  private const val YEAR_KEY = "sh.suiyun.chooseLicense.year"
-  private const val FILE_NAME_KEY = "sh.suiyun.chooseLicense.fileName"
-  private const val LICENSE_KEY = "sh.suiyun.chooseLicense.license"
+  private const val AUTHOR_KEY = "io.suiyun.chooseLicense.author"
+  private const val YEAR_KEY = "io.suiyun.chooseLicense.year"
+  private const val FILE_NAME_KEY = "io.suiyun.chooseLicense.fileName"
+  private const val LICENSE_KEY = "io.suiyun.chooseLicense.license"
 
   var author: String
     get() = properties.getValue(AUTHOR_KEY) ?: System.getProperty("user.name") ?: ""
