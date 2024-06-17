@@ -18,7 +18,7 @@ class License(val spdxId: String, val content: String) {
           .replace("[yyyy]", year)
       }
 
-      "0BSD", "BSD-2-Clause", "BSD-3-Clause", "BSD-3-Clause-Clear", "BSD-4-Clause",
+      "0BSD", "BSD-2-Clause", "BSD-2-Clause-Patent", "BSD-3-Clause", "BSD-3-Clause-Clear", "BSD-4-Clause",
       "MIT", "MIT-0", "ISC", "NCSA", "OFL-1.1", "PostgreSQL", "UPL-1.0", "Zlib" -> {
         return content
           .replace("[fullname]", author)
