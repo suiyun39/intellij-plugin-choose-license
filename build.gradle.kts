@@ -26,7 +26,7 @@ intellijPlatform {
   projectName = "intellij-plugin-choose-license"
 
   pluginConfiguration {
-    version = "1.3.0"
+    version = "1.3.1"
 
     ideaVersion {
       sinceBuild = "231"
