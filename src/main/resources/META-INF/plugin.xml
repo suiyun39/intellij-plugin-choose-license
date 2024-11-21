@@ -12,6 +12,10 @@
     Please refer to <a href="https://github.com/suiyun39/intellij-plugin-choose-license/releases">GitHub Release</a> for details.
   ]]></change-notes>
 
+  <!-- 插件兼容性
+       https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html#platformVersions -->
+  <idea-version since-build="231"/>
+
   <!-- Product and plugin compatibility requirements.
        Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
   <depends>com.intellij.modules.platform</depends>
