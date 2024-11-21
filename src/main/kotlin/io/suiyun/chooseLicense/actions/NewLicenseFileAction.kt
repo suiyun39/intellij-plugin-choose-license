@@ -17,7 +17,7 @@ class NewLicenseFileAction : AnAction() {
    */
   override fun actionPerformed(e: AnActionEvent) {
     val dialog = NewLicenseFileDialog()
-    val view = e.getRequiredData(LangDataKeys.IDE_VIEW)
+    val view = e.getData(LangDataKeys.IDE_VIEW) ?: return
     val directory = view.orChooseDirectory ?: return
 
     if (dialog.showAndGet()) {
