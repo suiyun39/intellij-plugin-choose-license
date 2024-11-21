@@ -27,6 +27,11 @@ intellijPlatform {
 
   pluginConfiguration {
     version = "1.3.2"
+
+    ideaVersion {
+      sinceBuild = "231"
+      untilBuild = provider { null }
+    }
   }
 
   publishing {
