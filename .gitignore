@@ -3,6 +3,7 @@
 *.iml
 out
 gen
+.intellijPlatform
 
 ### Gradle template
 .gradle

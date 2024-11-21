@@ -1,35 +1,43 @@
 plugins {
   id("java")
   id("org.jetbrains.kotlin.jvm") version "2.0.21"
-  id("org.jetbrains.intellij") version "1.17.4"
+  id("org.jetbrains.intellij.platform") version "2.1.0"
 }
-
-group = "io.suiyun"
-version = "1.3.0"
 
 repositories {
   mavenCentral()
+
+  intellijPlatform {
+    defaultRepositories()
+  }
 }
 
-// https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
-intellij {
-  version = "2023.1"
-  type = "IC"
-  updateSinceUntilBuild = false
+dependencies {
+  intellijPlatform {
+    intellijIdeaCommunity("2023.1")
+
+    bundledPlugin("com.intellij.java")
+
+    instrumentationTools()
+  }
+}
+
+intellijPlatform {
+  projectName = "intellij-plugin-choose-license"
+
+  pluginConfiguration {
+    version = "1.3.0"
+
+    ideaVersion {
+      sinceBuild = "231"
+    }
+  }
+
+  publishing {
+    token = System.getenv("PUBLISH_TOKEN")
+  }
 }
 
 kotlin {
   jvmToolchain(17)
-}
-
-tasks {
-  withType<JavaCompile> {
-    sourceCompatibility = "17"
-    targetCompatibility = "17"
-  }
-
-  // 插件发布
-  publishPlugin {
-    token = System.getenv("PUBLISH_TOKEN")
-  }
 }
