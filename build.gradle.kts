@@ -17,8 +17,6 @@ dependencies {
     intellijIdeaCommunity("2023.1")
 
     bundledPlugin("com.intellij.java")
-
-    instrumentationTools()
   }
 }
 
