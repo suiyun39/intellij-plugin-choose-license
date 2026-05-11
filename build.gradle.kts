@@ -1,7 +1,7 @@
 plugins {
   id("java")
-  id("org.jetbrains.kotlin.jvm") version "2.1.20"
-  id("org.jetbrains.intellij.platform") version "2.5.0"
+  id("org.jetbrains.kotlin.jvm") version "2.3.21"
+  id("org.jetbrains.intellij.platform") version "2.16.0"
 }
 
 repositories {
@@ -14,7 +14,7 @@ repositories {
 
 dependencies {
   intellijPlatform {
-    intellijIdeaCommunity("2023.1")
+    intellijIdeaCommunity("2023.3")
 
     bundledPlugin("com.intellij.java")
   }
@@ -27,7 +27,7 @@ intellijPlatform {
     version = "1.3.3"
 
     ideaVersion {
-      sinceBuild = "231"
+      sinceBuild = "233"
       untilBuild = provider { null }
     }
   }
